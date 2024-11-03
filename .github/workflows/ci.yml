@@ -39,10 +39,14 @@ jobs:
         with:
           python-version: '3.8'
 
+      - name: Install pytest directly
+        run: |
+          pip install pytest  # Install pytest directly
+
       - name: Run tests
         run: |
           echo "Running tests..."
-          pytest simple_python.py  # Change this path to your test directory
+          pytest simple_python.py  # Your specific test file
 
   build:
     runs-on: ubuntu-latest
