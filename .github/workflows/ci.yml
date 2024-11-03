@@ -42,7 +42,7 @@ jobs:
       - name: Run tests
         run: |
           echo "Running tests..."
-          pytest  # This runs the tests using pytest
+          pytest simple_python.py  # Change this path to your test directory
 
   build:
     runs-on: ubuntu-latest
@@ -56,7 +56,6 @@ jobs:
       - name: Build the application
         run: |
           echo "Building the application..."  # Add your actual build commands here
-          # Example: python setup.py build
 
   deploy_staging:
     runs-on: ubuntu-latest
