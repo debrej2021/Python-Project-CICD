@@ -1,7 +1,12 @@
-# test_simple_python.py
+# simple_python.py
 
-def test_addition():
-    assert 1 + 1 == 2
+from flask import Flask, jsonify
 
-def test_subtraction():
-    assert 2 - 1 == 1
+app = Flask(__name__)
+
+@app.route('/api/hello', methods=['GET'])
+def hello():
+    return jsonify(message="Hello, World!")
+
+if __name__ == '__main__':
+    app.run(debug=True)
