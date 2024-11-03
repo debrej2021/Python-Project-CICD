@@ -23,7 +23,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install -r requirements.txt  # Ensure pytest is included
+          pip install -r requirements.txt  # Ensure pytest and Flask are included
           pip freeze  # List all installed packages for debugging
 
   run_tests:
@@ -39,9 +39,9 @@ jobs:
         with:
           python-version: '3.8'
 
-      - name: Install pytest directly
+      - name: Install Flask and pytest
         run: |
-          pip install pytest  # Install pytest directly
+          pip install Flask pytest  # Install Flask and pytest directly
 
       - name: Run tests
         run: |
