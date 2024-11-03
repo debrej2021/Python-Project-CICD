@@ -46,7 +46,7 @@ jobs:
       - name: Run tests
         run: |
           echo "Running tests..."
-          pytest simple_python.py  # Your specific test file
+          pytest test_simple_python.py  # Your specific test file
 
   build:
     runs-on: ubuntu-latest
